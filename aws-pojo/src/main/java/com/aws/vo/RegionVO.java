@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RegionVO {
 
+    private Long id;
+
     private String regionName;
 
 }

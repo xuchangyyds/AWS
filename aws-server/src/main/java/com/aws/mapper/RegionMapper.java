@@ -18,4 +18,10 @@ public interface RegionMapper {
      */
     List<Region> selectAllRegions();
 
+    /**
+     * 根据区域ID查询区域详情
+     * @param id 区域ID
+     * @return RegionEntity
+     */
+    Region getRegionDetailById(Long id);
 }
