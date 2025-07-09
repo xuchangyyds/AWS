@@ -2,11 +2,6 @@ package com.aws.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.aws.enums.ResponseCode;
-import com.aws.exception.AppException;
-import com.aws.util.JwtUtil;
-import com.alibaba.fastjson.JSONObject;
-import com.aws.enums.ResponseCode;
-import com.aws.exception.AppException;
 import com.aws.util.JwtUtil;
 import com.aws.mapper.RegionMapper;
 
@@ -18,13 +13,6 @@ import com.aws.vo.RegionVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.security.*;
-import java.security.spec.InvalidKeySpecException;
-import com.aws.util.WeatherUtil;
-import com.aws.vo.RegionEnvVO;
-import java.security.*;
-import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.List;
 
