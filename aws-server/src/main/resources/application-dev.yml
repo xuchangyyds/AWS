@@ -1,8 +1,8 @@
-sky:
+aws:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    host: localhost
+    host: 192.168.1.99
     port: 3306
-    database: sky_take_out
+    database: wind_turbine
     username: root
-    password: root
+    password: aws12345678
