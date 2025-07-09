@@ -6,3 +6,16 @@ aws:
     database: wind_turbine
     username: root
     password: aws12345678
+
+jwt:
+  private-key:
+    -----BEGIN PRIVATE KEY-----
+    MC4CAQAwBQYDK2VwBCIEINONsIf/YaM0NM/B6ziPLlcRUeP4XoI/De4bSBYXNZjj
+    -----END PRIVATE KEY-----
+  algorithm: EdDSA
+  kid: KAB6QQKECN
+  subject-id: 3F87KTNMP9
+  expiration-seconds: 900  # 15分钟
+
+  weather:
+    url: jx54e43rca.re.qweatherapi.com

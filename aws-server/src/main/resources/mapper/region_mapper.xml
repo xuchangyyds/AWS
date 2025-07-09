@@ -7,4 +7,8 @@
     <select id="selectAllRegions" resultType="com.aws.po.Region">
         select * from region
     </select>
+
+    <select id="getRegionDetailById" resultType="com.aws.po.Region" parameterType="java.lang.Long">
+        select * from region where id = #{id}
+    </select>
 </mapper>
