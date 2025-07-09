@@ -1,0 +1,23 @@
+package com.aws.mapper;
+
+import com.aws.po.Region;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
+
+/**
+ * @author Origami
+ * @description 区域Mapper
+ * @create 2025-07-09 11:03
+ **/
+@Mapper
+public interface RegionMapper {
+
+
+    /**
+     * 查询所有区域信息
+     * @return List<RegionEntity>
+     */
+    List<Region> selectAllRegions();
+
+}

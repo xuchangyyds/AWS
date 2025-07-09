@@ -7,8 +7,10 @@
         <groupId>com.aws</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>aws-pojo</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>

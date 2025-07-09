@@ -1,6 +1,5 @@
 package com.aws;
 
-
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
