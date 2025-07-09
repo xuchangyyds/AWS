@@ -24,7 +24,6 @@ public class RegionService implements IRegionService {
     @Autowired
     private RegionMapper regionMapper;
 
-
     /**
      * 获取所有区域信息
      * @return 区域信息列表

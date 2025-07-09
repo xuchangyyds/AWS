@@ -12,8 +12,6 @@ import java.util.List;
  **/
 @Mapper
 public interface RegionMapper {
-
-
     /**
      * 查询所有区域信息
      * @return List<RegionEntity>
