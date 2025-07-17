@@ -4,7 +4,10 @@ import com.aws.dto.WindPageQueryDTO;
 import com.aws.po.TurbineAlert;
 import com.aws.po.WindTurbine;
 import com.aws.result.PageResult;
+import com.aws.result.Result;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public interface IWindService {
@@ -30,4 +33,18 @@ public interface IWindService {
      * @return
      */
     TurbineAlert getStatusById(Long id);
+
+
+    /**
+     * 根据id查询风机历史功率
+     * @param id
+     * @return
+     */
+    Double getHistoryById(Long id);
+
+    Double getRuntimeById(Long id);
+
+
+
+    Double getccTemperatureById(Long id);
 }

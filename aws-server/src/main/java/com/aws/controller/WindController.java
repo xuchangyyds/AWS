@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/aws/wind")
 @Api(tags = "风机相关接口")
@@ -60,7 +62,28 @@ public class WindController {
     }
 
 
+    @ApiOperation("查询某个风机过去几个月的历史功率")
+    @GetMapping("/{id}/history")
+    public Result<Double> getHistoryById(@PathVariable Long id){
+        log.info("查询某个风机过去几个月的历史功率：{}",id);
+         Double history = windService.getHistoryById(id);
+        return Result.success(history);
+    }
 
+    @ApiOperation("某风机运行小时数")
+    @GetMapping("/{id}/runtime")
+    public Result<Double> getRuntimeById(@PathVariable Long id){
+        log.info("某风机运行小时数：{}",id);
+        Double runtime = windService.getRuntimeById(id);
+        return Result.success(runtime);
+    }
 
+    @ApiOperation("某风机控制柜温度")
+    @GetMapping("/{id}/control_cabinet_temperature")
+    public Result<Double> getTemperatureById(@PathVariable Long id){
+        log.info("某风机控制柜温度：{}",id);
+        Double temperature = windService.getccTemperatureById(id);
+        return Result.success(temperature);
+    }
 
 }

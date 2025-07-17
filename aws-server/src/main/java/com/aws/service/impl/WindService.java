@@ -3,6 +3,7 @@ package com.aws.service.impl;
 
 import com.aws.mapper.WindMapper;
 import com.aws.po.TurbineAlert;
+import com.aws.result.Result;
 import com.github.pagehelper.Page;
 import com.aws.dto.WindPageQueryDTO;
 import com.aws.po.WindTurbine;
@@ -44,4 +45,22 @@ public class WindService implements IWindService {
     public TurbineAlert getStatusById(Long id) {
             return windMapper.getStatusById(id);
     }
+
+    @Override
+    public Double getHistoryById(Long id) {
+        return windMapper.getHistoryById(id);
+    }
+
+    @Override
+    public Double getRuntimeById(Long id) {
+        return  windMapper.getRuntimeById(id);
+
+    }
+
+    @Override
+    public Double getccTemperatureById(Long id) {
+        return windMapper.getccTemperatureById(id);
+    }
+
+
 }
