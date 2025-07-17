@@ -56,13 +56,13 @@ public class TurbineData implements Serializable {
     private Double minPower;
     /*** 平均无功功率*/
 
-    private Double reactivePowerAvg;
+    private Double avgReactivePower;
     /*** 最大无功功率*/
 
-    private Double reactivePowerMax;
+    private Double maxReactivePower;
     /*** 最小无功功率*/
 
-    private Double reactivePowerMin;
+    private Double minReactivePower;
     /*** 风能提供的可用功率*/
 
     private Double availablePFromWind;
@@ -144,6 +144,7 @@ public class TurbineData implements Serializable {
     /*** 变压器温度*/
 
     private Double transformerTemp;
+
     /** 数据创建时间*/
     private Date createTime;
 }
