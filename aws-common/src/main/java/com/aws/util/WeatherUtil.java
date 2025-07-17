@@ -43,7 +43,6 @@ public class WeatherUtil {
 
         log.info("request url: {}",request);
 
-        // 使用 HttpClient 发起请求
         try (CloseableHttpClient httpClient = HttpClients.createDefault();
              CloseableHttpResponse response = httpClient.execute(request)) {
 

@@ -1,16 +1,13 @@
 package com.aws.controller;
 
-import com.aws.po.Region;
+import com.alibaba.fastjson.JSON;
 import com.aws.result.Result;
 import com.aws.service.IRegionService;
-import com.aws.service.impl.RegionService;
 import com.aws.vo.RegionEnvVO;
 import com.aws.vo.RegionVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -23,6 +20,7 @@ import java.util.List;
  * @description 区域Controller
  * @create 2025-07-09 11:07
  **/
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/aws/region")
 public class RegionController {
@@ -35,9 +33,11 @@ public class RegionController {
      *
      * @return 区域信息列表
      */
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/list")
     public Result<List<RegionVO>> getAllRegions() {
         List<RegionVO> regions = regionService.getAllRegions();
+        log.info(JSON.toJSONString(regions));
         return Result.success(regions);
     }
 
