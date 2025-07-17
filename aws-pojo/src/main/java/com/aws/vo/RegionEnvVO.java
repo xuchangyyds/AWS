@@ -17,7 +17,7 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegionEnvVO implements Serializable{
+public class RegionEnvVO {
 
 
     /** 主键ID*/

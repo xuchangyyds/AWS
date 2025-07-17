@@ -19,7 +19,7 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegionEnv implements Serializable{
+public class RegionEnv {
 
 
     /** 主键ID*/

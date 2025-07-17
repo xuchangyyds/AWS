@@ -1,6 +1,7 @@
 package com.aws.mapper;
 
 import com.aws.po.Region;
+import com.aws.vo.RegionEnvVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -24,4 +25,5 @@ public interface RegionMapper {
      * @return RegionEntity
      */
     Region getRegionDetailById(Long id);
+
 }
