@@ -1,9 +1,11 @@
 package com.aws.mapper;
 
 import com.aws.dto.WindPageQueryDTO;
+import com.aws.po.TurbineAlert;
 import com.aws.po.WindTurbine;
 import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface WindMapper {
@@ -22,4 +24,13 @@ public interface WindMapper {
      * @return
      */
     WindTurbine getById(Long id);
+
+    /**
+     * 根据id查询状态
+     * @param id
+     * @return
+     */
+    @Select("select * from turbine_alert where turbine_id = #{id} order by id desc limit 1")
+    TurbineAlert getStatusById(Long id);
+
 }

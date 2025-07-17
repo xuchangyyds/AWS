@@ -1,5 +1,10 @@
 package com.aws.po;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 import java.util.Date;
@@ -8,6 +13,11 @@ import java.util.Date;
 * 风机异常报警记录表
 * @TableName turbine_alert
 */
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TurbineAlert implements Serializable {
 
     /*** 主键ID*/
