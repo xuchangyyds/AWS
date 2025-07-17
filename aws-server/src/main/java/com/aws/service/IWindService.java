@@ -1,6 +1,7 @@
 package com.aws.service;
 
 import com.aws.dto.WindPageQueryDTO;
+import com.aws.po.TurbineAlert;
 import com.aws.po.WindTurbine;
 import com.aws.result.PageResult;
 import org.springframework.stereotype.Service;
@@ -21,4 +22,12 @@ public interface IWindService {
      * @return
      */
     WindTurbine getById(Long id);
+
+
+    /**
+     * 根据id查询风机状态
+     * @param id
+     * @return
+     */
+    TurbineAlert getStatusById(Long id);
 }

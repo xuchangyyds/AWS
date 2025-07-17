@@ -2,6 +2,7 @@ package com.aws.controller;
 
 
 import com.aws.dto.WindPageQueryDTO;
+import com.aws.po.TurbineAlert;
 import com.aws.po.WindTurbine;
 import com.aws.result.PageResult;
 import com.aws.result.Result;
@@ -36,9 +37,6 @@ public class WindController {
         return Result.success(pageResult);
     }
 
-
-
-
     /**
      * 根据区域风机id查询风机
      * @param  id
@@ -51,6 +49,16 @@ public class WindController {
         WindTurbine  windTurbine= windService.getById(id);
         return Result.success(windTurbine);
     }
+
+    
+    @ApiOperation("显示发生错误的风机原因")
+    @GetMapping("/{id}/status")
+    public Result<TurbineAlert> getStatusById(@PathVariable Long id){
+        log.info("显示发生错误的风机原因：{}",id);
+        TurbineAlert turbineAlert = windService.getStatusById(id);
+        return Result.success(turbineAlert);
+    }
+
 
 
 
