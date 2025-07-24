@@ -47,6 +47,7 @@ public class RegionController {
      * @param id 区域ID
      * @return
      */
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/{id}")
     public Result<RegionEnvVO> getRegionDetail(@PathVariable Long id) throws NoSuchAlgorithmException, InvalidKeySpecException, SignatureException, InvalidKeyException {
         RegionEnvVO regionEnvVO = regionService.getRegionDetail(id);
