@@ -28,18 +28,12 @@ public class WindFarm {
     /*** 风电场中心点经度*/
     private Double longitude;
 
-    /*** 风电场地理坐标（支持空间索引）*/
-    private Integer location;
-
-    /*** 所属省份*/
-    private String province;
 
     /*** 所属区域ID*/
     private Long regionId;
 
-    /*** 所属城市*/
-    private String city;
 
     /*** 详细地址*/
     private String detailAddress;
+
 }
