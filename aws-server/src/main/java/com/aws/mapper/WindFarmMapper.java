@@ -2,6 +2,7 @@ package com.aws.mapper;
 
 
 import com.aws.po.WindFarm;
+import com.aws.vo.WindFarmVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -16,5 +17,5 @@ public interface WindFarmMapper {
      * @return
      */
     @Select("select * from wind_farm where region_id = #{regionId}")
-    List<WindFarm> getByRegionId(Long regionId);
+    List<WindFarmVO> getByRegionId(Long regionId);
 }

@@ -1,7 +1,6 @@
-package com.aws.po;
+package com.aws.vo;
 
-import java.io.Serializable;
-import io.swagger.annotations.ApiModelProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +8,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class WindFarm {
+@AllArgsConstructor
+public class WindFarmVO {
 
     /*** 主键ID，自增*/
     private Long id;
@@ -33,5 +32,14 @@ public class WindFarm {
 
     /*** 详细地址*/
     private String detailAddress;
+
+
+
+
+
+
+
+
+
 
 }

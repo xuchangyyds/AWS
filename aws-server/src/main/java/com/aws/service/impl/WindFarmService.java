@@ -4,6 +4,7 @@ import com.aws.mapper.WindFarmMapper;
 import com.aws.po.WindFarm;
 import com.aws.service.IWindFarmService;
 import com.aws.service.IWindService;
+import com.aws.vo.WindFarmVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -22,8 +23,7 @@ public class WindFarmService implements IWindFarmService {
     @Resource
     private WindFarmMapper windFarmMapper;
     @Override
-    public List<WindFarm> getByRegionId(Long regionId) {
-
+    public List<WindFarmVO> getByRegionId(Long regionId) {
         return windFarmMapper.getByRegionId(regionId);
     }
 }

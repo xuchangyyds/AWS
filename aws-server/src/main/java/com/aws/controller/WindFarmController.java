@@ -1,10 +1,9 @@
 package com.aws.controller;
 
 
-import com.aws.po.TurbineAlert;
-import com.aws.po.WindFarm;
 import com.aws.result.Result;
 import com.aws.service.IWindFarmService;
+import com.aws.vo.WindFarmVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -32,9 +31,9 @@ public class WindFarmController {
     private IWindFarmService windFarmService;
     @GetMapping("/{regionId}")
     @ApiOperation("根据区域id查询风场")
-    public Result<List<WindFarm>> getByRegionId(@PathVariable Long regionId) {
+    public Result<List<WindFarmVO>> getByRegionId(@PathVariable Long regionId) {
         log.info("根据区域id查询风场");
-        List<WindFarm> list = windFarmService.getByRegionId(regionId);
+        List<WindFarmVO> list = windFarmService.getByRegionId(regionId);
         return Result.success(list);
     }
 }
