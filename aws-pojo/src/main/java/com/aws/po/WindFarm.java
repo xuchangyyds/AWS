@@ -1,7 +1,6 @@
 package com.aws.po;
 
-import java.io.Serializable;
-import io.swagger.annotations.ApiModelProperty;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,10 +27,18 @@ public class WindFarm {
     /*** 风电场中心点经度*/
     private Double longitude;
 
+    /*** 风电场边界坐标点集合*/
+    private List<List<Point>> polygon;
+
     /*** 所属区域ID*/
     private Long regionId;
 
     /*** 详细地址*/
     private String detailAddress;
 
+    @Data
+    public static class Point {
+        private Double lng;
+        private Double lat;
+    }
 }

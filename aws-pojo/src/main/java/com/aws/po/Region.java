@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -25,33 +24,22 @@ import java.util.Date;
 @AllArgsConstructor
 public class Region implements Serializable {
 
-    /**
-     * 区域主键ID
-     */
+    /*** 区域主键ID*/
     private Long id;
-    /**
-     * 区域名称
-     */
+    /*** 区域名称*/
     private String regionName;
-    /**
-     * 区域编码（唯一标识）
-     */
+    /*** 区域编码（唯一标识）*/
     private String regionCode;
-    /**
-     * 区域中心点纬度
-     */
+    /*** 区域中心点纬度*/
     private BigDecimal latitude;
-    /**
-     * 区域中心点经度
-     */
+    /*** 区域中心点经度*/
     private BigDecimal longitude;
-    /**
-     * 备注信息
-     */
+    /*** 省*/
+    private String province;
+    /*** 市*/
+    private String city;
+    /*** 备注信息*/
     private String remark;
-    /**
-     * 创建时间
-     */
+    /*** 创建时间*/
     private Date createTime;
-
 }

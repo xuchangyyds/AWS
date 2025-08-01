@@ -52,9 +52,15 @@ public class RegionService implements IRegionService {
 
         List<RegionVO> regionVOS = new ArrayList<>();
         for (Region region : regions) {
-            RegionVO regionVO = new RegionVO();
-            regionVO.setRegionName(region.getRegionName());
-            regionVO.setId(region.getId());
+            RegionVO regionVO = RegionVO.builder()
+                    .regionName(region.getRegionName())
+                    .id(region.getId())
+                    .province(region.getProvince())
+                    .city(region.getCity())
+                    .latitude(region.getLatitude())
+                    .longitude(region.getLongitude())
+                    .build();
+
             regionVOS.add(regionVO);
         }
         return regionVOS;

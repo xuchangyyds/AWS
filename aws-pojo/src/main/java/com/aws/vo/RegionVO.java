@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.util.List;
+
 /**
  * @author Origami
  * @description
@@ -20,4 +23,20 @@ public class RegionVO {
 
     private String regionName;
 
+    private String province;
+
+    private String city;
+
+    private BigDecimal latitude;
+
+    private BigDecimal longitude;
+
+    private List<List<Point>> polygon;
+
+
+    @Data
+    public static class Point {
+        private Double lng;
+        private Double lat;
+    }
 }
