@@ -1,9 +1,7 @@
 package com.aws.service.impl;
 
 import com.aws.mapper.WindFarmMapper;
-import com.aws.po.WindFarm;
 import com.aws.service.IWindFarmService;
-import com.aws.service.IWindService;
 import com.aws.vo.WindFarmVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

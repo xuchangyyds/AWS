@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataBianjiangxitongxiangqing{
+public class DataBianjiangxitong {
 
     /** 主键ID*/
     private Long id;

@@ -1,19 +1,24 @@
-package com.aws.po;
+package com.aws.vo;
 
-import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
+/**
+ * @author Origami
+ * @description
+ * @create 2025-08-07 10:24
+ **/
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataZhuanzixiangqing {
+public class DataZhuanziVO {
 
-    /** 主键ID*/
-    private Long id;
     /** 风机ID，关联wind_turbine表*/
     private Long turbineId;
     /** 转子直径*/
@@ -44,4 +49,5 @@ public class DataZhuanzixiangqing {
     private Date createTime;
     /** 更新时间*/
     private Date updateTime;
+
 }

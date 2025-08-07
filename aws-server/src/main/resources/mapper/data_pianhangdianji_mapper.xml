@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aws.mapper.data.PianhangdianjiMapper">
+
+    <select id="queryNewestPianhangdianjiByTurbineId" resultType="com.aws.po.DataPianhangdianji" parameterType="java.lang.String">
+        SELECT *
+        FROM data_pianhangdianji
+        WHERE turbine_id = #{turbineId}
+        ORDER BY record_time DESC
+        LIMIT 1;
+    </select>
+</mapper>

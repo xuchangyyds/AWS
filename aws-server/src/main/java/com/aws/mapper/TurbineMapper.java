@@ -7,10 +7,19 @@ import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-import java.util.List;
-
 @Mapper
-public interface WindMapper {
+public interface TurbineMapper {
+
+
+    /**
+     * 根据区域、风场、风机编码获取id
+     * @param regionId 区域Id
+     * @param windFieldId 风场Id
+     * @param windTurbineCode 风机编码
+     * @return id
+     */
+    Long getIdByParams(Long regionId, Long windFieldId, String windTurbineCode);
+
 
 
     /**
@@ -36,7 +45,6 @@ public interface WindMapper {
      * @param id
      * @return
      */
-    @Select("select * from turbine_alert where turbine_id = #{id} order by id desc limit 1")
     TurbineAlert getStatusById(Long id);
 
 
@@ -67,5 +75,7 @@ public interface WindMapper {
      */
     @Select("select control_cabinet_temp from wind_turbine.turbine_data where id = #{id} order by id desc limit 1")
     Double getccTemperatureById(Long id);
+
+
 }
 

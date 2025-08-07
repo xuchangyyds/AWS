@@ -1,23 +1,24 @@
-package com.aws.po;
+package com.aws.vo;
 
-import java.math.BigDecimal;
-import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
 /**
-* 
-* @TableName data_zhuzhouxiangqing
-*/
+ * @author Origami
+ * @description
+ * @create 2025-08-07 10:20
+ **/
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataZhuzhouxiangqing{
+public class DataZhuzhouVO {
 
-    /** 主键ID*/
-    private Long id;
     /** 风机ID，关联wind_turbine表*/
     private Long turbineId;
     /** 主轴直径(米)*/
@@ -50,3 +51,4 @@ public class DataZhuzhouxiangqing{
     private Date updateTime;
 
 }
+

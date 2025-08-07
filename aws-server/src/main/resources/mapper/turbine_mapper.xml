@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aws.mapper.TurbineMapper">
+
+    <select id="getIdByParams" resultType="java.lang.Long">
+        SELECT id
+        FROM wind_turbine
+        where region_id = #{regionId}
+          and farm_id = #{windFieldId}
+          and turbine_code = #{windTurbineCode}
+    </select>
+
+    <select id="pageQuery" resultType="com.aws.po.WindTurbine">
+        SELECT *
+        FROM wind_turbine
+        WHERE region_id = #{regionId}
+    </select>
+    <select id="getById" resultType="com.aws.po.WindTurbine">
+        select * from wind_turbine
+        where id = #{id}
+    </select>
+
+    <select id="getStatusById" resultType="com.aws.po.TurbineAlert" parameterType="java.lang.Long">
+        select * from turbine_alert where turbine_id = #{id} order by id desc limit 1
+    </select>
+
+</mapper>

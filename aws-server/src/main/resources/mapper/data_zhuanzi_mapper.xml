@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aws.mapper.data.ZhuanziMapper">
+
+    <select id="queryNewestZhuanziByTurbineId" resultType="com.aws.po.DataZhuanzi" parameterType="java.lang.String">
+        select *
+        from data_zhuanzi
+        where turbine_id = #{turbineId}
+        order by record_time desc
+        limit 1;
+    </select>
+</mapper>

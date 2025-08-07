@@ -4,13 +4,22 @@ import com.aws.dto.WindPageQueryDTO;
 import com.aws.po.TurbineAlert;
 import com.aws.po.WindTurbine;
 import com.aws.result.PageResult;
-import com.aws.result.Result;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+public interface ITurbineService {
 
-@Service
-public interface IWindService {
+    /**
+     * 根据区域id、风场id、风机编码查询id
+     * @param regionId 区域Id
+     * @param windFieldId 风场Id
+     * @param windTurbineCode 风机编码
+     * @return 风机Id
+     */
+    Long getIdByParams(Long regionId, Long windFieldId, String windTurbineCode);
+
+
+
+
     /**
      * 根据区域id分页查询
      * @param windPageQueryDTO
@@ -47,4 +56,6 @@ public interface IWindService {
 
 
     Double getccTemperatureById(Long id);
+
+
 }
