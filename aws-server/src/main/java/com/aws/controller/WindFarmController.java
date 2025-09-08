@@ -28,7 +28,6 @@ public class WindFarmController {
     @Autowired
     private IWindFarmService windFarmService;
 
-
     @GetMapping("/{regionId}")
     @ApiOperation("根据区域id查询风场")
     @CrossOrigin(origins = "http://localhost:5173")
@@ -38,9 +37,5 @@ public class WindFarmController {
         log.info("查询结果：{}", list);
         return Result.success(list);
     }
-
-
-
-
 
 }

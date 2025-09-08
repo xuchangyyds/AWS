@@ -8,5 +8,4 @@
         insert into region_env (id, region_id, record_time, weather_desc, temperature, humidity, pressure, wind_speed, wind_direction, wave_height, wave_period, water_speed, water_temp, visibility, uv_index)
         values (#{id}, #{regionId}, #{recordTime}, #{weatherDesc}, #{temperature}, #{humidity}, #{pressure}, #{windSpeed}, #{windDirection}, #{waveHeight}, #{wavePeriod}, #{waterSpeed}, #{waterTemp}, #{visibility}, #{uvIndex})
     </insert>
-
 </mapper>

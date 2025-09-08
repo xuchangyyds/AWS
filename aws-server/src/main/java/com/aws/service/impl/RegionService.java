@@ -30,16 +30,12 @@ public class RegionService implements IRegionService {
 
     @Autowired
     private RegionMapper regionMapper;
-
     @Autowired
     private RegionEnvMapper regionEnvMapper;
-
     @Autowired
     private JwtUtil jwtUtil;
-
     @Autowired
     private WeatherUtil weatherUtil;
-
 
     /**
      * 获取所有区域信息
@@ -111,6 +107,5 @@ public class RegionService implements IRegionService {
 
         return regionEnvVO;
     }
-
 
 }

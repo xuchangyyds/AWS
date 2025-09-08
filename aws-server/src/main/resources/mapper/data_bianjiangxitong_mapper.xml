@@ -4,7 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.aws.mapper.data.BianjiangxitongMapper">
 
-
     <select id="queryNewestBianjiangxitongByTurbineId" resultType="com.aws.po.DataBianjiangxitong">
         SELECT *
         FROM data_bianjiangxitong
@@ -12,6 +11,5 @@
         ORDER BY record_time DESC
         LIMIT 1;
     </select>
-
 
 </mapper>

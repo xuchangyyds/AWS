@@ -10,6 +10,4 @@
         ORDER BY record_time DESC
         LIMIT 1;
     </select>
-
-
 </mapper>
